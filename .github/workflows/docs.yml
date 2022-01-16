@@ -54,4 +54,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           localDir: docs/.vuepress/dist
           remoteDir: ./
-          options: "--delete --asci"
+          options: "--delete dist --asci"
