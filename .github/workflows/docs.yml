@@ -27,7 +27,7 @@ jobs:
         run: npm i -g pnpm
       # 如果缓存没有命中，安装依赖
       - name: Install dependencies
-        run: pnpm i
+        run: pnpm install --no-frozen-lockfile
 
       # 运行构建脚本
       - name: Build VuePress site
