@@ -12,4 +12,9 @@ const add = () => {
   counter.value ++ ;
 }
 </script>
+<style>
+.button{
+  cursor: pointer;
+}
+</style>
 
