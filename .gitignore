@@ -6,3 +6,4 @@ node_modules
 .idea
 .vscode
 docs/**/dist
+pnpm-lock.yaml
