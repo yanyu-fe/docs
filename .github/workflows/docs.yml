@@ -22,7 +22,9 @@ jobs:
         with:
           # 选择要使用的 node 版本
           node-version: '14'
-
+      # 安装pnpm
+      - name: Setup pnpm
+        run: npm i -g pnpm
       # 如果缓存没有命中，安装依赖
       - name: Install dependencies
         run: pnpm i
