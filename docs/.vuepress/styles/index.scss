@@ -3,9 +3,19 @@
   --c-brand-light:#36cfc9;
   --c-tip:#5cdbd3;
 }
+.back-to-top{
+  --back-to-top-color: #13c2c2;
+  --back-to-top-color-hover: #36cfc9;
+}
+
 
 html.dark{
   --c-brand:#13a8a8;
   --c-brand-light:#138585;
   --c-tip: #146262;
+  .back-to-top{
+    --back-to-top-color: #13a8a8;
+    --back-to-top-color-hover:#138585;
+  }
+
 }

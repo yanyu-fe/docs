@@ -3,6 +3,8 @@ import { DefaultThemeOptions, ViteBundlerOptions } from "vuepress";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import { codeBlockPlugin } from "@yanyu-fe/vuepress-plugin-code-block";
 import * as navbar from "./configs/navbar";
+import * as sidebar from "./configs/sidebar";
+import {resolve} from "path"
 export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
     title: "QA文档",
     locales:{
@@ -12,11 +14,14 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
         }
     },
     themeConfig:{
+        repo:"yanyu-fe/docs",
         locales:{
             '/':{
                 lastUpdatedText:"最后更新",
                 contributorsText:"贡献者",
-                navbar:navbar.zh
+                navbar:navbar.zh,
+                sidebar:sidebar.zh,
+                editLinkText: '在 GitHub 上编辑此页',
             }
         },
     },
@@ -40,6 +45,12 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
                         placeholder:"搜索"
                     }
                 }
+            }
+        ],
+        [
+            '@vuepress/plugin-register-components',
+            {
+                componentsDir: resolve(__dirname, './components'),
             }
         ]
     ],

@@ -24,6 +24,7 @@
     "webpack": "^5.66.0"
   },
   "dependencies": {
+    "@vuepress/plugin-register-components": "^2.0.0-beta.33",
     "vue": "^3.2.26"
   },
   "homepage": "https://yanyu-fe.github.io/docs"
