@@ -1,1 +1,0 @@
-import{d as a,r as o,o as s,c,f as n,t as r,b as p}from"./app.70f492cd.js";const _=a({setup(u){const e=o(0),t=()=>{e.value++};return(l,d)=>(s(),c("div",null,[n(r(e.value)+" ",1),p("button",{onClick:t},"\u589E\u52A0")]))}});export{_};
