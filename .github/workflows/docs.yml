@@ -34,11 +34,9 @@ jobs:
         run: pnpm docs:build
       # 发布到ftp
       - name: Deploy to ftp
-        uses: sebastianpopp/ftp-action@releases/v2
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          host: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: docs/.vuepress/dist
-          remoteDir: ./
-          options: "--asci"
+          local-dir: docs/.vuepress/dist
