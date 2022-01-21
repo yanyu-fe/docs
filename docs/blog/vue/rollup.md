@@ -169,7 +169,51 @@ export default defineConfig({
 
 我们在使用其他组件库的时候发现都会有友好的代码提示，其中最主要的就是`ts`的类型处理的，所以我们还需要使用`ts`插件生成`d.ts`文件。
 
-在`rollup.config.ts`中添加如下的插件和配置信息
-```ts
+首先我们需要在项目根目录下增加一个`tsconfig.json`文件，配置信息大致如下：
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "skipLibCheck": true
+  }
+}
 
 ```
+
+然后在`rollup.config.ts`中添加如下的插件和配置信息
+```ts
+import { defineConfig } from "rollup";
+export default defineConfig({
+  plugins: [
+    // 增量配置
+    typescript({
+      // 覆盖根目录下的tsconfig
+      tsconfigOverride: {
+        compilerOptions: {
+          // 配置生成declaration
+          declaration: true,
+        },
+        // 配置包含的ts文件
+        include: ["src/**/*.ts"],
+      },
+    }),
+  ]
+})
+```
+
+然后我们再次打包的时候，发现会正常生成`ts`文件了。

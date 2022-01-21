@@ -17,5 +17,18 @@ export const zh:NavbarConfig = [
                 ]
             }
         ]
+    },
+    {
+        text:"博客",
+        children:[
+            {
+                text: "vue",
+                link:"/blog/vue/"
+            },
+            {
+                text: "taro",
+                link:"/blog/taro/"
+            }
+        ]
     }
 ];

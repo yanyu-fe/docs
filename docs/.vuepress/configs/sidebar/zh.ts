@@ -23,5 +23,7 @@ export const zh:SidebarConfig = {
                 }
             ]
         }
-    ]
+    ],
+    '/blog/taro/': ["/blog/taro/create-project"],
+    '/blog/vue/': ["/blog/vue/rollup"]
 }
