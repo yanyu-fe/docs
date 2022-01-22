@@ -4,7 +4,9 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import { codeBlockPlugin } from "@yanyu-fe/vuepress-plugin-code-block";
 import * as navbar from "./configs/navbar";
 import * as sidebar from "./configs/sidebar";
-import {resolve} from "path"
+import { resolve } from "path"
+
+const base:`/${string}/` | '/' =  process.env.VITE_BASE_PATH ? `/${process.env.VITE_BASE_PATH}/` : '/';
 export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
     title: "QA文档",
     locales:{
@@ -25,6 +27,7 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
             }
         },
     },
+    base,
     bundlerConfig: {
         viteOptions: {
             server: {
