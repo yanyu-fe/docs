@@ -79,3 +79,73 @@ const App = createApp({
 export default App
 
 ```
+
+## 编写`stores`
+
+在`src/stores`目录下创建一个`user.ts`，我们用一个简单的例子来做演示
+
+
+```ts
+import { defineStore } from "pinia";
+
+export const userStore = defineStore('user',{
+  state:()=>({
+    userId:null
+  }),
+  getters:{
+    getUserId(state){
+      return state.userId
+    }
+  },
+  actions:{
+    setUserId(){
+      this.userId = 1;
+    }
+  }
+})
+
+```
+
+我们在`src/pages/index/index.vue`中进行使用
+
+```diff
+
+<template>
+  <view class="index">
++    <text>用户的id为：{{getUserId}}</text>
+  </view>
+</template>
+
+<script lang="ts">
+import { ref,defineComponent } from 'vue'
+import './index.less'
++ import {userStore} from "../../stores/user";
++ import { storeToRefs } from "pinia"
+export default defineComponent({
+  setup () {
++    const store = userStore();
++    // 获取用户的id
++    const { getUserId } =storeToRefs(store);
++    // 设置用户的id
++    store.setUserId();
+    const msg = ref('Hello world')
+    return {
+      msg,
++      getUserId
+    }
+  }
+})
+</script>
+```
+
+:::warning 注意：
+
+由于在`pinia`中不能做解构（解构后会导致响应式失效），所以我们需要通过`pinia`官方提供的`storeToRefs`进行结构`state`和`getters`，但是不能解构`actions`。
+
+:::
+
+## 结束
+
+到此为止我们就完成了一个`pinia + vue3 + typescript`的小程序开发的项目。[模板仓库](https://github.com/yanyu-fe/taro-vue3-template.git)
+
+目前测试使用的小程序为微信小程序，兼容性测试未完善，欢迎提出意见和建议。
