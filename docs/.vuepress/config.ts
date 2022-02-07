@@ -1,7 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import { DefaultThemeOptions, ViteBundlerOptions } from "vuepress";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-import { codeBlockPlugin } from "@yanyu-fe/vuepress-plugin-code-block";
 import * as navbar from "./configs/navbar";
 import * as sidebar from "./configs/sidebar";
 import { resolve } from "path"
@@ -17,6 +16,7 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
     },
     themeConfig:{
         repo:"yanyu-fe/docs",
+        logo:"/logo.svg",
         locales:{
             '/':{
                 lastUpdatedText:"最后更新",
@@ -39,7 +39,7 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
         },
     },
     plugins: [
-        [codeBlockPlugin, {}],
+        ['@yanyu-fe/vuepress-plugin-code-block', {}],
         [
             '@vuepress/plugin-search',
             {

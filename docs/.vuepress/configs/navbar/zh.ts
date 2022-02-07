@@ -30,5 +30,22 @@ export const zh:NavbarConfig = [
                 link:"/blog/taro/"
             }
         ]
+    },
+    {
+        text:"UI库",
+        children:[
+            {
+                text: "介绍",
+                link: "/mist/introduce"
+            },
+            {
+                text: "脚手架",
+                link: "/mist/cli/"
+            },
+            {
+                text: "组件库",
+                link: "/mist/ui/"
+            }
+        ]
     }
 ];
