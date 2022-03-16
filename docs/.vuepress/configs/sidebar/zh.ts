@@ -18,6 +18,10 @@ export const zh:SidebarConfig = {
                         {
                             text:"code-block",
                             link:"/plugins/vuepress/code-block.md"
+                        },
+                        {
+                            text:"dumi",
+                            link:"/plugins/vuepress/dumi-theme.md"
                         }
                     ]
                 }
