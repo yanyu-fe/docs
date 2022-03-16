@@ -25,7 +25,7 @@ export const zh:SidebarConfig = {
         }
     ],
     '/blog/taro/': ["/blog/taro/create-project"],
-    '/blog/vue/': ["/blog/vue/rollup"],
+    '/blog/vue/': ["/blog/vue/rollup","/blog/vue/translation"],
     "/mist/cli/": ["/mist/cli/"],
     "/mist/ui/": ["/mist/ui/"],
     "/mist/":["/mist/introduce"],

@@ -8,6 +8,7 @@ import { resolve } from "path"
 const base:`/${string}/` | '/' =  process.env.VITE_BASE_PATH ? `/${process.env.VITE_BASE_PATH}/` : '/';
 export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
     title: "QA文档",
+    theme: "@yanyu-fe/vuepress-theme-dumi",
     locales:{
         '/':{
             lang:"zh-CN",
