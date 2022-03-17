@@ -52,6 +52,9 @@ export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
             }
         ],
         [
+            '@vuepress/plugin-toc',{}
+        ],
+        [
             '@vuepress/plugin-register-components',
             {
                 componentsDir: resolve(__dirname, './components'),

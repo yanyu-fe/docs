@@ -28,6 +28,8 @@ const badgeImg = computed(
             props.distTag ? '/'+ props.distTag : ''
         }?label=${encodeURIComponent(badgeLabel.value)}`
 )
+
+const download = computed(()=>`https://img.shields.io/npm/dw/${props.package}.svg`)
 </script>
 
 <template>
@@ -38,7 +40,8 @@ const badgeImg = computed(
       target="_blank"
       rel="noopener noreferrer"
   >
-    <img :src="badgeImg" :alt="package" />
+    <img :src="badgeImg" :alt="package" style="margin-right: 10px;" />
+    <img :src="download" :alt="package">
   </a>
 </template>
 

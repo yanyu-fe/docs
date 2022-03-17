@@ -13,6 +13,10 @@ export const zh:NavbarConfig = [
                     {
                         text:"代码块插件",
                         link:"/plugins/vuepress/code-block"
+                    },
+                    {
+                        text:"主题插件",
+                        link:"/plugins/vuepress/dumi-theme"
                     }
                 ]
             }
@@ -28,6 +32,10 @@ export const zh:NavbarConfig = [
             {
                 text: "taro",
                 link:"/blog/taro/"
+            },
+            {
+                text: "其他",
+                link:"/blog/other/"
             }
         ]
     },
