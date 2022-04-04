@@ -1,0 +1,1 @@
+const a={key:"v-e9ca09de",path:"/blog/taro/",title:"Taro\u5B66\u4E60",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:164756092e4,contributors:[{name:"aibayanyu",email:"aibayanyu@qq.com",commits:2}]},filePathRelative:"blog/taro/index.md"};export{a as data};

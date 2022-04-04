@@ -1,0 +1,1 @@
+const t={key:"v-4716ba08",path:"/mist/cli/",title:"\u811A\u624B\u67B6\u5F00\u53D1",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u6D4B\u8BD5",slug:"\u6D4B\u8BD5",children:[]}],git:{updatedTime:1644236998e3,contributors:[{name:"aibayanyu",email:"aibayanyu@qq.com",commits:1}]},filePathRelative:"mist/cli/index.md"};export{t as data};
